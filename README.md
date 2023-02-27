@@ -18,12 +18,12 @@ The aim for students in this week’s workshop is to...
 * The Library Carpentry [Open Refine tutorial](https://librarycarpentry.org/lc-open-refine/)
 * OpenRefine documentation on [GREL functions](https://openrefine.org/docs/manual/grelfunctions)
 
-## Getting Started
-Open the OpenRefine app. It pops up as a tab in your default browser. If OpenRefine doesn’t open when you click on the app, or you want to work in OpenRefine in a browser that isn’t your default, just copy and paste this link: [http://127.0.0.1:3333](http://127.0.0.1:3333)
-
 ## V&A Collection Data
 This workshop will use data from the [V&amp;A Collections API](https://developers.vam.ac.uk). 
 
 For a short time, there will be a CSV file of collection data in this GitHub ([VA_CeramicObjects.csv](https://github.com/emilyrlong/OpenRefine4Collections/blob/main/VA_CeramicObjects.csv)). To download, go the csv file in GitHub, right-click on the Raw button, and select 'Download the Linked File' or 'Save Link As...'
 
 But to make sure you're working with up-to-date data, you can download data from the API using the Python notebook ([VA Collections Data.ipynb](https://github.com/emilyrlong/OpenRefine4Collections/blob/main/VA_Collections_Data.ipynb)).  
+
+## Getting Started
+Open the OpenRefine app. It pops up as a tab in your default browser. If OpenRefine doesn’t open when you click on the app, or you want to work in OpenRefine in a browser that isn’t your default, just copy and paste this link: [http://127.0.0.1:3333](http://127.0.0.1:3333)
