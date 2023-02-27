@@ -27,3 +27,5 @@ But to make sure you're working with up-to-date data, you can download data from
 
 ## Getting Started
 Open the OpenRefine app. It pops up as a tab in your default browser. If OpenRefine doesn’t open when you click on the app, or you want to work in OpenRefine in a browser that isn’t your default, just copy and paste this link: [http://127.0.0.1:3333](http://127.0.0.1:3333)
+
+For the full tutorial, see the tutorial [OpenRefineTutorial.md](https://github.com/emilyrlong/OpenRefine4Collections/blob/main/OpenRefineTutorial.md)
