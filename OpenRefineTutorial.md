@@ -27,3 +27,11 @@ Most of OpenRefine’s tools can be found by clicking the drop-down arrows at th
 * Rename columns by clicking the drop-down menu arrow > Edit column > Rename this column
 * Remove columns by clicking the arrow > Edit column > Remove this column
 
+## Text Facet
+
+### Convert accessionYear to a number
+Edit Cells > Common Transforms > to number
+
+### Use Clustering for the sampleMaterial column
+OpenRefine can automatically detect values that just differ my capitalisation or punctuation, and you can easily update the values to match (e.g, Ceramic and ceramic).
+Cluster > Check the 'Merge?' button for all relevant clusters > Merge selected & Close
