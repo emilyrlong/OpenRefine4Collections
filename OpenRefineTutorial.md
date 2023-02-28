@@ -29,8 +29,20 @@ Most of OpenRefine’s tools can be found by clicking the drop-down arrows at th
 
 ## Text Facet
 
-### Convert accessionYear to a number
+### accessionNumber
+This is a reference number for when the object was accessioned by the museum, and we would expect this reference to be unique.
+1. Use a Text Facet to look at the accession numbers. Sort the facet by count. 
+accessionNumber drop-down button > Facet > Text Facet > Sort by count
+There are 429 numbers but 498 rows in the data, indicating that there are duplicates.
+2. Remove the duplicate rows
+a. Sort the accessionNumber column (Drop-down > Sort... > Sort by text)
+b. Click the Sort...
+
+### accessionYear
+1. Convert the accessionYear to a number and use a text facet to see the distribution of years.
 Edit Cells > Common Transforms > to number
+2. Create a new column called accessionDate which converts the year into a full date. Use a timeline facet to look at the data.
+Edit Column > Add column based on this column... > Name the column 'accessionDate' and add the GREL expression ``value.toDate('Y-M-d')``
 
 ### Use Clustering for the sampleMaterial column
 OpenRefine can automatically detect values that just differ my capitalisation or punctuation, and you can easily update the values to match (e.g, Ceramic and ceramic).
