@@ -52,16 +52,35 @@ There are 433 accession numbers and 433 rows in the data. But originally, there 
 
 ### accessionYear
 1. Convert the accessionYear to a number and use a text facet to see the distribution of years.
- * Edit Cells > Common Transforms > to number
- * Facet > Text Facet 
+
+<details>
+<summary>Want a hint?</summary>
+<ul>
+  <li>Edit Cells > Common Transforms > to number</li>
+  <li>Facet > Text Facet</li> 
+</ul>
+</details>
+
 2. Create a new column called accessionDate which converts the year into a full date. Use a timeline facet to look at the data.
- * Edit Column > Add column based on this column... > Name the column 'accessionDate' and add the GREL expression ``value.toDate('Y-M-d')``
+
+<details>
+<summary>Want a hint?</summary>
+<ul>
+  <li> Edit Column > Add column based on this column... > Name the column 'accessionDate' and add the GREL expression <b>value.toDate('Y-M-d')</b></li>
+  <li>Facet > Timeline Facet</li> 
+</ul>
+</details>
+
 
 ### systemNumber
 This is the reference number for the object in the V&A [Explore the Collections](https://www.vam.ac.uk/collections?type=featured) website. By appending the systemNumber to the URL ``https://collections.vam.ac.uk/item/``, you can create a URL that links to the object's images and details.
 
-1. Create a URL column
-* Edit Column > Add column based on this column... > Name the column 'objectURL' and add the GREL expression `"https://collections.vam.ac.uk/item/" + value`
+**Create a URL column**
+
+<details>
+<summary>Want a hint?</summary>
+Edit Column > Add column based on this column... > Name the column 'objectURL' and add the GREL expression <b>"https://collections.vam.ac.uk/item/" + value</b>
+</details>
 
 ### objectType
 
@@ -79,9 +98,13 @@ This is the reference number for the object in the V&A [Explore the Collections]
 
 ### primaryImageId
 This ID number can be used to find the JPG images of the objects where available. See the V&A developer's guide for images [here](https://developers.vam.ac.uk/guide/v2/images/introduction.html).
-1. Create an image URL column
-* Edit Column > Add column based on this column... > Name the column 'imageURL' and add the GREL expression 
-` "https://framemark.vam.ac.uk/collections/" + value + "/full/!600,400/0/default.jpg" ` 
+
+**Create an image URL column**
+
+<details>
+<summary>Hint:</summary>
+Edit Column > Add column based on this column... > Name the column 'imageURL' and add the GREL expression <b>"https://framemark.vam.ac.uk/collections/" + value + "/full/!600,400/0/default.jpg"</b>
+</details>
 
 ### sampleMaterial
 Use Clustering for the sampleMaterial column
