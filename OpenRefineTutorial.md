@@ -83,8 +83,10 @@ Edit Column > Add column based on this column... > Name the column 'objectURL' a
 </details>
 
 ### objectType
+Use a text facet to explore the object types. You may want to create a new column called objectCategory to refine these.
 
 ### primaryTitle
+This column has lots of blank values, but use a text facet to explore the data a bit.
 
 ### primaryPlace
 
@@ -93,8 +95,6 @@ Edit Column > Add column based on this column... > Name the column 'objectURL' a
 ### primaryMaker Association
 
 ### primaryDate
-
-
 
 ### primaryImageId
 This ID number can be used to find the JPG images of the objects where available. See the V&A developer's guide for images [here](https://developers.vam.ac.uk/guide/v2/images/introduction.html).
@@ -111,9 +111,21 @@ Use Clustering for the sampleMaterial column
 OpenRefine can automatically detect values that just differ by capitalisation or punctuation, and you can easily update the values to match (e.g, Ceramic and ceramic).
 Cluster > Check the 'Merge?' button for all relevant clusters > Merge selected & Close
 
-### sampleTechnique
+** Flesh out these steps **
 
+### sampleTechnique
+Repeat the same steps as you did for sampleMaterial to refine the techniques a bit more.
 
 ### sampleStyle
+This column has lots of blank values, but use a text facet to explore the data a bit.
 
 ### currentLocation displayName
+This data could be used in a few ways. Use a text facet to explore a bit
+* Clean up the location names (e.g., capitalisation for 'in store')
+* Create a column for on display, in store, on loan, and in exhibition.
+* Create a variable called 'Site' to split South Kensington and Wedgwood
+* For objects on display, split the Gallery Name (e.g., Jewellery) and Gallery Number (e.g., Room 91) into separate columns
+
+## Export Data
+
+When your data is cleaned up, click the Export drop-down button in the top right corner, and choose a file format to export in. For visualising, a CSV, xlsx, or Google Sheets could be handy.
