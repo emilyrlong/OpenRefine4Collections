@@ -36,7 +36,8 @@ accessionNumber drop-down button > Facet > Text Facet > Sort by count
 There are 429 numbers but 498 rows in the data, indicating that there are duplicates.
 2. Remove the duplicate rows
 a. Sort the accessionNumber column (Drop-down > Sort... > Sort by text)
-b. Click the Sort...
+b. This will temporarily sort the data, and a Sort button will pop up above the page. Click Sort then Reorder rows permanently
+c. ...
 
 ### accessionYear
 1. Convert the accessionYear to a number and use a text facet to see the distribution of years.
