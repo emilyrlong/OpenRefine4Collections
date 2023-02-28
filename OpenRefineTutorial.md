@@ -40,9 +40,15 @@ Example:
 ### accessionNumber
 This is a reference number for when the object was accessioned by the museum, and we would expect this reference to be unique. Use a Text Facet to look at the accession numbers. Sort the facet by count. 
 
-``accessionNumber drop-down button > Facet > Text Facet > Sort by count``
+<details open>
+<summary>Want a hint?</summary>
+accessionNumber drop-down button > Facet > Text Facet > Sort by count
+</details>
 
-There are 433 accession numbers and 433 rows in the data. But originally, there were duplicates (see [VA_CeramicObjects_Duplicates.csv](https://github.com/emilyrlong/OpenRefine4Collections/blob/main/VA_CeramicObjects_Duplicates.csv)). It was easier to remove these duplicates in Python, but you can use this other dataset and try another OpenRefine [tutorial](https://kb.refinepro.com/2011/08/remove-duplicate.html) to remove the duplicates yourself.
+<details open>
+<summary>About duplicate data...</summary>
+There are 433 accession numbers and 433 rows in the data. But originally, there were duplicates (see <a href="https://github.com/emilyrlong/OpenRefine4Collections/blob/main/VA_CeramicObjects_Duplicates.csv">VA_CeramicObjects_Duplicates.csv</a>). It was easier to remove these duplicates in Python, but you can use this other dataset and try another OpenRefine [tutorial](https://kb.refinepro.com/2011/08/remove-duplicate.html) to remove the duplicates yourself.
+</details>
 
 ### accessionYear
 1. Convert the accessionYear to a number and use a text facet to see the distribution of years.
