@@ -23,11 +23,19 @@ Open the OpenRefine app in a browser with the link: [http://127.0.0.1:3333](http
 ### 3. Get familiar with viewing your data
 You can view the rows in groups of 5, 10, 25 or 50, and use the previous/next buttons to move between row pages.
 
+## Demo
+
 Most of OpenRefine’s tools can be found by clicking the drop-down arrows at the top of each column. Take a moment to check out some of the operations in the drop-down menu. The following are handy to know:
 * Rename columns by clicking the drop-down menu arrow > Edit column > Rename this column
-* Remove columns by clicking the arrow > Edit column > Remove this column
+* Remove columns by clicking the arrow > Edit column > Remove this column 
+* Facets group the data giving the unique values and the counts of how many times they occurred
+* Text filters let you search and filter for values in columns
 
-## Text Facet
+Example:
+* Use a Text Facet or Text Filter to show that the objectContentWarning and imageContentWarning columns only contain false values
+* Remove these columns
+
+## For You to Complete...
 
 ### accessionNumber
 This is a reference number for when the object was accessioned by the museum, and we would expect this reference to be unique. Use a Text Facet to look at the accession numbers. Sort the facet by count. 
@@ -49,7 +57,34 @@ This is the reference number for the object in the V&A [Explore the Collections]
 1. Create a URL column
 * Edit Column > Add column based on this column... > Name the column 'objectURL' and add the GREL expression `"https://collections.vam.ac.uk/item/" + value`
 
+### objectType
+
+### primaryTitle
+
+### primaryPlace
+
+### primaryMaker Name
+
+### primaryMaker Association
+
+### primaryDate
+
+
+
+### primaryImageId
+This ID number can be used to find the JPG images of the objects where available. See the V&A developer's guide for images [here](https://developers.vam.ac.uk/guide/v2/images/introduction.html).
+1. Create an image URL column
+* Edit Column > Add column based on this column... > Name the column 'imageURL' and add the GREL expression 
+` "https://framemark.vam.ac.uk/collections/" + value + "/full/!600,400/0/default.jpg" ` 
+
 ### sampleMaterial
 Use Clustering for the sampleMaterial column
-OpenRefine can automatically detect values that just differ my capitalisation or punctuation, and you can easily update the values to match (e.g, Ceramic and ceramic).
+OpenRefine can automatically detect values that just differ by capitalisation or punctuation, and you can easily update the values to match (e.g, Ceramic and ceramic).
 Cluster > Check the 'Merge?' button for all relevant clusters > Merge selected & Close
+
+### sampleTechnique
+
+
+### sampleStyle
+
+### currentLocation displayName
