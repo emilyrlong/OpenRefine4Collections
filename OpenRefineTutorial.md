@@ -30,21 +30,26 @@ Most of OpenRefine’s tools can be found by clicking the drop-down arrows at th
 ## Text Facet
 
 ### accessionNumber
-This is a reference number for when the object was accessioned by the museum, and we would expect this reference to be unique.
-1. Use a Text Facet to look at the accession numbers. Sort the facet by count. 
-accessionNumber drop-down button > Facet > Text Facet > Sort by count
-There are 429 numbers but 498 rows in the data, indicating that there are duplicates.
-2. Remove the duplicate rows
-a. Sort the accessionNumber column (Drop-down > Sort... > Sort by text)
-b. This will temporarily sort the data, and a Sort button will pop up above the page. Click Sort then Reorder rows permanently
-c. ...
+This is a reference number for when the object was accessioned by the museum, and we would expect this reference to be unique. Use a Text Facet to look at the accession numbers. Sort the facet by count. 
+
+``accessionNumber drop-down button > Facet > Text Facet > Sort by count``
+
+There are 433 accession numbers and 433 rows in the data. But originally, there were duplicates (see [VA_CeramicObjects_Duplicates.csv](https://github.com/emilyrlong/OpenRefine4Collections/blob/main/VA_CeramicObjects_Duplicates.csv)). It was easier to remove these duplicates in Python, but you can use this other dataset and try another OpenRefine [tutorial](https://kb.refinepro.com/2011/08/remove-duplicate.html) to remove the duplicates yourself.
 
 ### accessionYear
 1. Convert the accessionYear to a number and use a text facet to see the distribution of years.
-Edit Cells > Common Transforms > to number
+ * Edit Cells > Common Transforms > to number
+ * Facet > Text Facet 
 2. Create a new column called accessionDate which converts the year into a full date. Use a timeline facet to look at the data.
-Edit Column > Add column based on this column... > Name the column 'accessionDate' and add the GREL expression ``value.toDate('Y-M-d')``
+ * Edit Column > Add column based on this column... > Name the column 'accessionDate' and add the GREL expression ``value.toDate('Y-M-d')``
 
-### Use Clustering for the sampleMaterial column
+### systemNumber
+This is the reference number for the object in the V&A [Explore the Collections](https://www.vam.ac.uk/collections?type=featured) website. By appending the systemNumber to the URL ``https://collections.vam.ac.uk/item/``, you can create a URL that links to the object's images and details.
+
+1. Create a URL column
+* Edit Column > Add column based on this column... > Name the column 'objectURL' and add the GREL expression `"https://collections.vam.ac.uk/item/" + value`
+
+### sampleMaterial
+Use Clustering for the sampleMaterial column
 OpenRefine can automatically detect values that just differ my capitalisation or punctuation, and you can easily update the values to match (e.g, Ceramic and ceramic).
 Cluster > Check the 'Merge?' button for all relevant clusters > Merge selected & Close
