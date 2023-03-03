@@ -66,7 +66,8 @@ There are 433 accession numbers and 433 rows in the data. But originally, there 
 <details>
 <summary>Want a hint?</summary>
 <ul>
-  <li> Edit Column > Add column based on this column... > Name the column 'accessionDate' and add the GREL expression <b>value.toDate('Y-M-d')</b></li>
+  <li> Edit Column > Add column based on this column... > Name the column 'accessionDate' and add the GREL expression <b>value.toDate('Y-M-d') .... OR.... </b></li>
+ <li> Edit Column > Add column based on this column... > Name the column 'accessionDate' and add the GREL expression <b>value.toString().toDate('Y')</b></li>
   <li>Facet > Timeline Facet</li> 
 </ul>
 </details>
